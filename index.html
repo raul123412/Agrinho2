@@ -1,71 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho 2026 - Futuro Sustentável</title>
+    <title>AgroForte - Soluções e Marketplace</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <nav>
-        <div class="logo">🍓 AgroSustentável</div>
-        <ul>
-            <li><a href="#" onclick="showPage('simulador')">Simulador</a></li>
-            <li><a href="#" onclick="showPage('sobre1')">Sobre Mim 1</a></li>
-            <li><a href="#" onclick="showPage('sobre2')">Sobre Mim 2</a></li>
-            <li><a href="#" onclick="showPage('sobre3')">Sobre Mim 3</a></li>
-            <li><a href="#" onclick="showPage('agrinho')">Agrinho</a></li>
-        </ul>
-    </nav>
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-seedling"></i> Agro<span>Forte</span>
+        </div>
+        <nav>
+            <a href="#home">Início</a>
+            <a href="#marketplace">Marketplace</a>
+            <a href="#sobre">Soluções</a>
+        </nav>
+        <div class="header-actions">
+            <button id="theme-toggle" title="Alternar tema">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button id="cart-toggle">
+                <i class="fa-solid fa-cart-shopping"></i> <span id="cart-count">0</span>
+            </button>
+            <button id="google-login-btn" class="btn-google">
+                <i class="fa-brands fa-google"></i> Entrar com Google
+            </button>
+        </div>
+    </header>
 
-    <main id="content">
-        <section id="simulador" class="page active">
-            <h2>Simulador de Estufa de Morango</h2>
-            <p>Ajuste os controles para encontrar o equilíbrio ideal.</p>
-            
-            <div class="simulator-card">
-                <div class="controls">
-                    <label>Temperatura: <span id="val-temp">22</span>°C</label>
-                    <input type="range" id="temp" min="0" max="45" value="22">
-                    
-                    <label>Umidade do Ar: <span id="val-ar">60</span>%</label>
-                    <input type="range" id="ar" min="0" max="100" value="60">
-                    
-                    <label>Umidade do Solo: <span id="val-solo">50</span>%</label>
-                    <input type="range" id="solo" min="0" max="100" value="50">
-                </div>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Agro Forte, Futuro Sustentável</h1>
+            <p>Conectando produtores, resolvendo gargalos de logística e oferecendo o melhor marketplace para o seu negócio rural prosperar.</p>
+            <a href="#marketplace" class="btn-primary">Explorar Marketplace</a>
+        </div>
+    </section>
 
-                <div class="status-display">
-                    <div id="status-box">Aguardando dados...</div>
-                    <small>Dica: Morangos preferem entre 18°C e 25°C.</small>
-                </div>
+    <section id="marketplace" class="marketplace-container">
+        <h2>Marketplace Agro</h2>
+        <p class="subtitle">Encontre insumos, maquinários e soluções para o seu cultivo.</p>
+        
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="graos">Grãos & Sementes</button>
+            <button class="filter-btn" data-filter="maquinas">Maquinários</button>
+            <button class="filter-btn" data-filter="insumos">Insumos & Fertilizantes</button>
+        </div>
+
+        <div class="products-grid" id="products-grid">
             </div>
-        </section>
+    </section>
 
-        <section id="sobre1" class="page">
-            <h2>Sobre Mim - Parte 1</h2>
-            <p>Olá! Sou aluno do 1º Ano do Ensino Médio e este projeto visa unir tecnologia e agricultura.</p>
-        </section>
-
-        <section id="sobre2" class="page">
-            <h2>Sobre Mim - Parte 2</h2>
-            <p>Meus interesses incluem programação, sustentabilidade e o desenvolvimento do campo.</p>
-        </section>
-
-        <section id="sobre3" class="page">
-            <h2>Sobre Mim - Parte 3</h2>
-            <p>Acredito que o equilíbrio entre produção e meio ambiente é o único caminho para o futuro.</p>
-        </section>
-
-        <section id="agrinho" class="page">
-            <h2>Sobre o Concurso Agrinho</h2>
-            <p>O tema de 2026 reflete a necessidade de um agro forte e consciente.</p>
-            <div class="image-placeholder">
-                <img src="https://via.placeholder.com/600x300?text=Imagem+Agrinho+2026" alt="Logo Agrinho">
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Seu Carrinho</h3>
+            <button id="close-cart"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <p class="empty-message">Seu carrinho está vazio.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-container">
+                <span>Total:</span>
+                <span id="cart-total">R$ 0,00</span>
             </div>
-        </section>
-    </main>
+            <button class="btn-checkout" onclick="alert('Integração de pagamento simulada!')">Finalizar Compra</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
