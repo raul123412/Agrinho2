@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2026 - Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">🍓 AgroSustentável</div>
+        <ul>
+            <li><a href="#" onclick="showPage('simulador')">Simulador</a></li>
+            <li><a href="#" onclick="showPage('sobre1')">Sobre Mim 1</a></li>
+            <li><a href="#" onclick="showPage('sobre2')">Sobre Mim 2</a></li>
+            <li><a href="#" onclick="showPage('sobre3')">Sobre Mim 3</a></li>
+            <li><a href="#" onclick="showPage('agrinho')">Agrinho</a></li>
+        </ul>
+    </nav>
+
+    <main id="content">
+        <section id="simulador" class="page active">
+            <h2>Simulador de Estufa de Morango</h2>
+            <p>Ajuste os controles para encontrar o equilíbrio ideal.</p>
+            
+            <div class="simulator-card">
+                <div class="controls">
+                    <label>Temperatura: <span id="val-temp">22</span>°C</label>
+                    <input type="range" id="temp" min="0" max="45" value="22">
+                    
+                    <label>Umidade do Ar: <span id="val-ar">60</span>%</label>
+                    <input type="range" id="ar" min="0" max="100" value="60">
+                    
+                    <label>Umidade do Solo: <span id="val-solo">50</span>%</label>
+                    <input type="range" id="solo" min="0" max="100" value="50">
+                </div>
+
+                <div class="status-display">
+                    <div id="status-box">Aguardando dados...</div>
+                    <small>Dica: Morangos preferem entre 18°C e 25°C.</small>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre1" class="page">
+            <h2>Sobre Mim - Parte 1</h2>
+            <p>Olá! Sou aluno do 1º Ano do Ensino Médio e este projeto visa unir tecnologia e agricultura.</p>
+        </section>
+
+        <section id="sobre2" class="page">
+            <h2>Sobre Mim - Parte 2</h2>
+            <p>Meus interesses incluem programação, sustentabilidade e o desenvolvimento do campo.</p>
+        </section>
+
+        <section id="sobre3" class="page">
+            <h2>Sobre Mim - Parte 3</h2>
+            <p>Acredito que o equilíbrio entre produção e meio ambiente é o único caminho para o futuro.</p>
+        </section>
+
+        <section id="agrinho" class="page">
+            <h2>Sobre o Concurso Agrinho</h2>
+            <p>O tema de 2026 reflete a necessidade de um agro forte e consciente.</p>
+            <div class="image-placeholder">
+                <img src="https://via.placeholder.com/600x300?text=Imagem+Agrinho+2026" alt="Logo Agrinho">
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
